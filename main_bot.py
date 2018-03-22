@@ -5,7 +5,7 @@ import urllib
 import re
 
 
-TOKEN = open('config.txt').read().rstrip()
+TOKEN = open('config').read().rstrip()
 URL = "https://api.telegram.org/bot{}/".format(TOKEN)
 
 
@@ -53,10 +53,7 @@ def echo_all(updates):
         try:
             text = update["message"]["text"]
             chat = update["message"]["chat"]["id"]
-            if "ik ben" in text.lower():
-                matches = re.findall(r'ik ben (\w+)', text.lower)
-                print matches.group(1)
-                send_message(matches.group(1), chat)
+            send_message(text, chat)
         except Exception as e:
             print(e)
 
