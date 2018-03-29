@@ -26,3 +26,7 @@ Now lets try a combined sentence!
 And lastly, the end of a conversation. 
 ![start_interaction](/images/Capture4.PNG)
 
+
+## Authors
+* [Bauke Brenninkmeijer](https://github.com/Baukebrenninkmeijer)
+* [Wietse Kuipers](https://github.com/wkuipers)
