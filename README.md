@@ -9,5 +9,20 @@ The bot can be used by mentioning an artist in your message. If one is mentioned
 The approach taken for this project was the "bottoms-up" method, where we initially looked for a good dataset related to the direction we wanted to go. The specific problem that would be solved was based on the capacities that were allowed by the data. 
 The [dataset](https://www.kaggle.com/dboshardy/ma-ma-markov-chain-ruler-of-the-funny-lyrics-game/data) we found was scraped from lyricsfreak.com by a kaggle user. The dataset contains the artist name, song name and lyrics from 57650 songs. This was deemed quite sufficient for our purpose. 
 
-Our problem was, among others, well suited for Markov chains. Using the well known [Markovify](https://github.com/jsvine/markovify) library, we implemented the answering structure needed for these answers. 
+Our problem was, among others, well suited for Markov chains. Using the well known [Markovify](https://github.com/jsvine/markovify) library, we implemented the answering structure needed for these answers. We have implemented the capacity to respond in the style of a specific artist, but it is also possible to combine styles and name multiple artists. 
+
+To give an indication of the possible interactions, see the images below. From top to bottom, they will visualize a possible conversation between a user and the bot. 
+![greeting](/images/Capture.PNG)
+
+After some explaining, lets get to the first query! As is clear, this one has a maximum length.
+![start_interaction](/images/Capture1.PNG)
+
+A different query, this time without a maximum length. 
+![start_interaction](/images/Capture2.PNG)
+
+Now lets try a combined sentence!
+![start_interaction](/images/Capture3.PNG)
+
+And lastly, the end of a conversation. 
+![start_interaction](/images/Capture4.PNG)
 
