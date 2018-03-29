@@ -64,6 +64,10 @@ def echo_all(updates):
 def respond(text):
     artists_in_message = []
     # print len(data.keys())
+    if text == "/start":
+        return "Hey! I'm the LyrifyBot and I can help you get lyrics and sentences inspired by specific artists. " \
+               "Just mention an artist and if neccesary and maximum character length."
+
     for artist in data.keys():
         regex = r'\b(' + artist + r')\b|\A('+artist+r'\b)'
         if re.search(regex, text, re.I):
@@ -82,6 +86,8 @@ def respond(text):
         return woo.get_lyric(artists_in_message[0], data)
     if re.search(r'\Ahey', text, re.I):
         return "Hey! I'm the LyrifyBot and I can help you get lyrics inspired by specific artists."
+    if re.search(r'\Athanks', text, re.I):
+        return "You're very welcome! Come again if you like."
     if len(artists_in_message) == 0:
         return "No artist found in message. Please send a new one!"
 
