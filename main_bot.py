@@ -97,5 +97,5 @@ def main():
 
 
 if __name__ == '__main__':
-    # main()
-    print respond("hey botje")
+    main()
+    # print respond("hey botje")
