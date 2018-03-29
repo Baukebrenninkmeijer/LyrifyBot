@@ -47,7 +47,7 @@ def artists(data):
     return artists
 
 
-def get_mashup(artists, length, data):
+def get_mashup(artists, data, length=0):
     models = []
     for artist in artists:
         model = ArtistModel(artist, data)
@@ -56,7 +56,7 @@ def get_mashup(artists, length, data):
     return models[0].lyric(length)
 
 
-def get_lyric(artist, length, data):
+def get_lyric(artist, data, length=0):
     model = ArtistModel(artist, data)
     return model.lyric(length)
 

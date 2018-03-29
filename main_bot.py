@@ -72,13 +72,13 @@ def respond(text):
         print "triggered multiple artists: {}".format(artists_in_message)
         regex_res = re.search(r'(\d+)', text, re.I)
         if regex_res is not None:
-            return woo.get_mashup(artists_in_message, regex_res.group(0), data)
+            return woo.get_mashup(artists_in_message, data, regex_res.group(0))
         return woo.get_mashup(artists_in_message, data)
     if len(artists_in_message) == 1:
         print "triggered single artist: {}".format(artists_in_message)
         regex_res = re.search(r'(\d+)', text, re.I)
         if regex_res is not None:
-            return woo.get_lyric(artists_in_message[0], regex_res.group(0), data)
+            return woo.get_lyric(artists_in_message[0], data, regex_res.group(0))
         return woo.get_lyric(artists_in_message[0], data)
     if re.search(r'\Ahey', text, re.I):
         return "Hey! I'm the LyrifyBot and I can help you get lyrics inspired by specific artists."
